@@ -4,4 +4,4 @@ version: 0.1.0
 dependencies:
   - name: poc
     version: 0.1.0
-    repository: https://github.com/jane-delivery/akuity-poc-config/releases
+    repository: https://jane-delivery.github.io/akuity-poc-config/
