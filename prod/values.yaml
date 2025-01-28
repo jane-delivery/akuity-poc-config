@@ -1,0 +1,8 @@
+poc:
+  service:
+    port: 8080
+    type: None
+  serviceAccount:
+    create: false
+  ingress:
+    enabled: false
