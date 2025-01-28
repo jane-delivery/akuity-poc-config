@@ -3,3 +3,5 @@ poc:
     port: 8080
   serviceAccount:
     create: false
+  ingress:
+    enabled: false
