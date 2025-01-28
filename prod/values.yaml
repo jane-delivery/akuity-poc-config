@@ -1,6 +1,6 @@
 poc:
   service:
-    port: 8080
+    port: 80
     type: None
   serviceAccount:
     create: false
