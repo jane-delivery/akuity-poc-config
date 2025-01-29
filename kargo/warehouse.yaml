@@ -8,3 +8,6 @@ spec:
   - image:
       repoURL: ghcr.io/jane-delivery/akuity-poc-app
       tagSelectionStrategy: semver
+  - chart:
+      name: poc
+      repoURL: https://jane-delivery.github.io/akuity-poc-config/
