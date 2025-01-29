@@ -69,7 +69,7 @@ spec:
             value: ${{ imageFrom("ghcr.io/jane-delivery/akuity-poc-app").Tag }}
       - uses: yaml-update
         config:
-          path: ./src/dev/Chart.yaml
+          path: ./src/staging/Chart.yaml
           updates:
           - key: dependencies.0.version
             value: ${{ chartFrom("https://jane-delivery.github.io/akuity-poc-config/", "poc").Version }}
