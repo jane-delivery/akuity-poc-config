@@ -1,7 +1,7 @@
 poc:
   image:
     repository: "ghcr.io/jane-delivery/akuity-poc-app"
-    tag: v0.0.4
+    tag: v0.0.3
   service:
     port: 8080
     type: ClusterIP
