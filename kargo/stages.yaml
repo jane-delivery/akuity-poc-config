@@ -80,3 +80,45 @@ spec:
       - uses: git-push
         config:
           path: ./src
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Stage
+metadata:
+  name: prod
+  namespace: kargo-path
+spec:
+  requestedFreight:
+  - origin:
+      kind: Warehouse
+      name: kargo-path
+    sources:
+      stages:
+      - staging
+  promotionTemplate:
+    spec:
+      steps:
+      - uses: git-clone
+        config:
+          repoURL: https://github.com/jane-delivery/akuity-poc-config
+          checkout:
+          - branch: main
+            path: ./src
+      - uses: yaml-update
+        config:
+          path: ./src/prod/values.yaml
+          updates:
+          - key: poc.image.tag
+            value: ${{ imageFrom("ghcr.io/jane-delivery/akuity-poc-app").Tag }}
+      - uses: yaml-update
+        config:
+          path: ./src/prod/Chart.yaml
+          updates:
+          - key: dependencies.0.version
+            value: ${{ chartFrom("https://jane-delivery.github.io/akuity-poc-config/", "poc").Version }}
+      - uses: git-commit
+        config:
+          path: ./src
+          message: "Update prod to new tag"
+      - uses: git-push
+        config:
+          path: ./src
