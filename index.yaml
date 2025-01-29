@@ -3,6 +3,16 @@ entries:
   poc:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2025-01-29T18:03:37.224242185Z"
+    description: A Helm chart for Kubernetes
+    digest: edfeece7cbe4c53c1cebcab307c3a548ad577346b24da56926c7c218dde792ee
+    name: poc
+    type: application
+    urls:
+    - https://github.com/jane-delivery/akuity-poc-config/releases/download/poc-0.1.2/poc-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2025-01-28T05:05:53.445002957Z"
     description: A Helm chart for Kubernetes
     digest: 4822b92849118b808d9446a4be4d5acd0037981726ff8251b329dfc8cb037585
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/jane-delivery/akuity-poc-config/releases/download/poc-0.1.0/poc-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-28T05:05:53.44501536Z"
+generated: "2025-01-29T18:03:37.224264877Z"
