@@ -11,25 +11,17 @@ spec:
   - chart:
       name: poc
       repoURL: https://jane-delivery.github.io/akuity-poc-config/
-# ---
-# apiVersion: kargo.akuity.io/v1alpha1
-# kind: Warehouse
-# metadata:
-#   name: docker-image
-#   namespace: kargo-path
-# spec:
-#   subscriptions:
-#   - image:
-#       repoURL: ghcr.io/jane-delivery/akuity-poc-app
-#       tagSelectionStrategy: semver
-# ---
-# apiVersion: kargo.akuity.io/v1alpha1
-# kind: Warehouse
-# metadata:
-#   name: helm-chart
-#   namespace: kargo-path
-# spec:
-#   subscriptions:
-#   - chart:
-#       name: poc
-#       repoURL: https://jane-delivery.github.io/akuity-poc-config/
+---
+apiVersion: kargo.akuity.io/v1alpha1
+kind: Warehouse
+metadata:
+  name: branch
+  namespace: kargo-path
+spec:
+  subscriptions:
+  - image:
+      repoURL: ghcr.io/jane-delivery/akuity-poc-app
+      imageSelectionStrategy: Lexical
+  - chart:
+      name: poc
+      repoURL: https://jane-delivery.github.io/akuity-poc-config/

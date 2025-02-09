@@ -49,7 +49,7 @@ spec:
   requestedFreight:
   - origin:
       kind: Warehouse
-      name: kargo-path
+      name: poc
     sources:
       stages:
       - dev
@@ -91,7 +91,7 @@ spec:
   requestedFreight:
   - origin:
       kind: Warehouse
-      name: kargo-path
+      name: poc
     sources:
       stages:
       - staging
