@@ -1,0 +1,10 @@
+apiVersion: s3.services.k8s.aws/v1alpha1
+kind: Bucket
+metadata:
+  name: marcial-ack-s3-test
+spec:
+  name: marcial-ack-s3-test
+  tagging:
+    tagSet:
+    - key: marcial-tag
+      value: random-value
